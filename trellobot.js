@@ -52,7 +52,7 @@ bot.on('ready', () => {
     if (!conf.contentString) conf.contentString = "" 
     if (!conf.enabledEvents) conf.enabledEvents = []
     if (!conf.userIDs) conf.userIDs = {}
-    if (!conf.realNames) conf.realNames = true
+    if (typeof(conf.realNames) === "undefined") conf.realNames = true
     // set default prefix is none provided in conf
     if (!conf.prefix) {
         conf.prefix = "."
